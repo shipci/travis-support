@@ -11,7 +11,7 @@ class Module
     end
 
     def load_constants(const)
-      const.constants.each do |name|
+      const.constants(false).each do |name|
         full_name = [const.name, name].join('::')
         unless skip?(full_name)
           skip_names << full_name
@@ -19,7 +19,7 @@ class Module
           child = begin
             const.const_get(name)
           rescue NameError => e
-            eval("#{const}::#{name}")
+            eval(full_name)
           end
           load_constants(child) if loadable?(child)
         end
