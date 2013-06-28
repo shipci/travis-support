@@ -1,3 +1,4 @@
+require 'protected_attributes'
 require 'active_record'
 require 'erb'
 
