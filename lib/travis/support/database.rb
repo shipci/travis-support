@@ -15,6 +15,15 @@ module Travis
           'logs_database' => Travis.config.logs_database || Travis.config.database
         }
 
+        if Travis.config.logs_database
+          if defined?(Log)
+            Log.establish_connection 'logs_database'
+            if defined?(Log::Part)
+              Log::Part.establish_connection 'logs_database'
+            end
+          end
+        end
+
         ActiveRecord::Base.establish_connection(Travis.env)
       end
     end
