@@ -1,7 +1,6 @@
 begin
   require 'newrelic_rpm'
 rescue LoadError
-  "Couldn't load New Relic library, no big deal."
 end
 require 'core_ext/module/prepend_to'
 
