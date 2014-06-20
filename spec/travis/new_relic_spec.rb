@@ -33,7 +33,7 @@ describe Travis::NewRelic do
 
     it 'still calls the instrumented method' do
       instrumentable.handle
-      instrumentable.handled.should be_true
+      instrumentable.handled.should == true
     end
 
     it 'notifies new relic with the expected payload' do
