@@ -9,7 +9,7 @@ services:
   - rabbitmq
 matrix:
   exclude:
-    - rvm: 1.9.3
-      jdk: openjdk7
+  #  - rvm: 1.9.3
+   #   jdk: openjdk7
     - rvm: 1.9.3
       jdk: oraclejdk7
