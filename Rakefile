@@ -1,4 +1,4 @@
-require 'ci/reporter/rake/rspec' 
+#require 'ci/reporter/rake/rspec' 
 require 'rake'
 require 'rspec/core/rake_task'
 
