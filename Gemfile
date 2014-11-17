@@ -30,6 +30,8 @@ group :test do
   gem 'simplecov',     '>= 0.4.0', :require => false
   gem 'guard'
   gem 'guard-rspec'
+  gem "ci_reporter"
+  gem "simplecov-csv"
 end
 
 
