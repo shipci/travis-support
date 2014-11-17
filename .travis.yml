@@ -1,15 +1,12 @@
 language: ruby
 rvm:
   - 1.9.3
-  - jruby-19mode
+ # - jruby-19mode
 jdk:
   - openjdk6
-  - openjdk7
+  #- openjdk7
 services:
   - rabbitmq
-matrix:
-  exclude:
-  #  - rvm: 1.9.3
-   #   jdk: openjdk7
-    - rvm: 1.9.3
-      jdk: oraclejdk7
+  
+env:
+- CI_REPORTS=shippable/testresults COVERAGE_REPORTS=shippable/codecoverage
